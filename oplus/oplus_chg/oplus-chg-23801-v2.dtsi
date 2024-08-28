@@ -196,22 +196,22 @@
 		>;
 		oplus_spec,led_on-fccmax-ma = <0 1340 4000 4000 4000 4000 1000 0>;
 		oplus_spec,fccmax-ma-lv = <
-			0 1200 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_UNKNOWN */
+			0 1340 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_UNKNOWN */
 			0 600  600  600  600  600  600  0	/* OPLUS_WIRED_CHG_MODE_SDP */
-			0 1200 1600 1600 1600 1600 1600 0	/* OPLUS_WIRED_CHG_MODE_CDP */
-			0 1200 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_DCP */
-			0 1200 3600 3600 3600 3600 2948 0	/* OPLUS_WIRED_CHG_MODE_VOOC */
-			0 1200 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_QC */
-			0 1200 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_PD */
+			0 1340 1600 1600 1600 1600 1600 0	/* OPLUS_WIRED_CHG_MODE_CDP */
+			0 1340 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_DCP */
+			0 1340 3600 3600 3600 3600 2948 0	/* OPLUS_WIRED_CHG_MODE_VOOC */
+			0 1340 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_QC */
+			0 1340 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_PD */
 		>;
 		oplus_spec,fccmax-ma-hv = <
-			0 1340 2000 2000 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_UNKNOWN */
+			0 1340 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_UNKNOWN */
 			0 600  600  600  600  600  600  0	/* OPLUS_WIRED_CHG_MODE_SDP */
-			0 1200 1600 1600 1600 1600 1600 0	/* OPLUS_WIRED_CHG_MODE_CDP */
-			0 1200 2000 2000 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_DCP */
-			0 1200 2000 2000 3600 3600 2948 0	/* OPLUS_WIRED_CHG_MODE_VOOC */
-			0 1200 2000 2000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_QC */
-			0 1200 2000 2000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_PD */
+			0 1340 1600 1600 1600 1600 1600 0	/* OPLUS_WIRED_CHG_MODE_CDP */
+			0 1340 2200 2200 2200 2200 2200 0	/* OPLUS_WIRED_CHG_MODE_DCP */
+			0 1340 3600 3600 3600 3600 2948 0	/* OPLUS_WIRED_CHG_MODE_VOOC */
+			0 1340 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_QC */
+			0 1340 4000 4000 4000 4000 2948 0	/* OPLUS_WIRED_CHG_MODE_PD */
 		>;
 
 		oplus_spec,cool_down_pdqc_vol_mv = <9000 9000 9000>;
@@ -317,13 +317,6 @@
 						CURR_LIMIT_7BIT_3_0A CURR_LIMIT_7BIT_3_0A
 						CURR_LIMIT_7BIT_2_0A CURR_LIMIT_7BIT_2_0A>;
 
-		oplus,abnormal_over_80w_adapter_current = <CURR_LIMIT_7BIT_9_5A CURR_LIMIT_7BIT_9_5A
-						CURR_LIMIT_7BIT_7_0A CURR_LIMIT_7BIT_7_0A
-						CURR_LIMIT_7BIT_6_0A CURR_LIMIT_7BIT_6_0A
-						CURR_LIMIT_7BIT_5_0A CURR_LIMIT_7BIT_5_0A
-						CURR_LIMIT_7BIT_4_0A CURR_LIMIT_7BIT_4_0A
-						CURR_LIMIT_7BIT_3_0A CURR_LIMIT_7BIT_3_0A
-						CURR_LIMIT_7BIT_2_0A CURR_LIMIT_7BIT_2_0A>;
 		oplus,general_strategy_name = "cgcl";
 		oplus,general_strategy_data = < OPLUS_STRATEGY_USE_SHELL_TEMP
 						0   380 CURR_LIMIT_7BIT_9_5A 1 0
@@ -1082,12 +1075,12 @@
 				strategy_temp_little_cold =	<4150 20 0 0 0
 								4150 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_cool =		<4150 26 0 0 0
 								4330 21 0 0 0
 								4330 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_little_cool = <
 								4150 52 0 0 0
 								4150 50 0 0 0
@@ -1139,14 +1132,14 @@
 				strategy_temp_little_cold =	<4150 20 0 0 0
 								4150 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_cool =		<4150 26 0 0 0
 								4150 25 0 0 0
 								4330 21 0 0 0
 								4330 20 0 0 0
 								4330 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_little_cool =	<4150 52 0 0 0
 								4150 50 0 0 0
 								4150 45 0 0 0
@@ -1185,10 +1178,10 @@
 
 			strategy_soc_75_to_85 {
 				strategy_temp_little_cold =	<4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_cool =		<4330 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_little_cool =	<4480 35 0 0 0
 								4534 30 0 0 0
 								4534 25 0 0 0
@@ -1216,10 +1209,10 @@
 
 			strategy_soc_85_to_90 {
 				strategy_temp_little_cold =	<4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_cool =		<4330 15 0 0 0
 								4534 13 0 0 0
-								4470 10 1 0 0>;
+								4540 10 1 0 0>;
 				strategy_temp_little_cool =	<4480 35 0 0 0
 								4534 30 0 0 0
 								4534 25 0 0 0

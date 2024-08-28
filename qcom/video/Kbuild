@@ -8,6 +8,10 @@ dtbo-y += kalama-vidc.dtbo
 dtbo-y += kalama-vidc-v2.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_CROW), y)
+dtbo-y += crow-vidc.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_ANORAK), y)
 dtbo-y += anorak-vidc.dtbo
 endif

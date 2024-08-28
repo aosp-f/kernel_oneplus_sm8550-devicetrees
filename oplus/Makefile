@@ -1,4 +1,4 @@
-KALAMA_BASE_DTB += ../qcom/kalama.dtb ../qcom/kalama-v2.dtb
+KALAMA_BASE_DTB += ../qcom/kalama.dtb ../qcom/kalama-v2.dtb ../qcom/crow.dtb
 KALAMA_APQ_BASE_DTB += ../qcom/kalamap.dtb ../qcom/kalamap-v2.dtb
 
 ifeq ($(CONFIG_WUKONG_DTB),y)
@@ -29,6 +29,13 @@ OPLUS_KALAMA_BOARDS += \
 		aston-23801-kalama-overlay-T0.dtbo \
 		aston-23861-kalama-overlay-T0.dtbo \
 		aston-23801-kalama-overlay-EVB.dtbo
+else ifeq ($(CONFIG_BENZ_DTB),y)
+OPLUS_KALAMA_BOARDS += \
+		benz-23061-crow-overlay-DVT1.dtbo \
+		benz-23871-crow-overlay-DVT1.dtbo \
+		benz-23061-crow-overlay.dtbo \
+		benz-23871-crow-overlay.dtbo
+
 endif
 
 kalama-overlays-dtb-y += $(OPLUS_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)

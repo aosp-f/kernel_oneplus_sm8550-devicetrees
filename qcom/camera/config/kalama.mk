@@ -22,4 +22,5 @@ dtbo-$(CONFIG_XIGUA_DTB) += oplus/xigua-camera-overlay.dtbo
 dtbo-$(CONFIG_ASTON_DTB) += oplus/aston-camera-overlay.dtbo \
 				oplus/aston-camera-overlay-T0.dtbo  \
 				oplus/astondomastic-camera-overlay-T0.dtbo
+dtbo-$(CONFIG_BENZ_DTB) += oplus/benz-camera-overlay.dtbo
 #OPLUS_DTS_OVERLAY end
