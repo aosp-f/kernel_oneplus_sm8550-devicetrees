@@ -76,6 +76,23 @@ kalama-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOA
 kalama_le-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 dtb-y += $(kalama-dtb-y)
 
+CROW_BASE_DTB += crow.dtb
+
+CROW_BOARDS += \
+		crow-rumi-overlay.dtbo \
+		crow-atp-overlay.dtbo \
+		crow-idp-overlay.dtbo \
+		crow-idp-wcd9395-wcd-dmic-overlay.dtbo \
+		crow-idp-wcd9395-dmic-overlay.dtbo \
+		crow-idp-wcd9395-aatc-overlay.dtbo \
+		crow-idp-rcm-overlay.dtbo \
+		crow-qrd-overlay.dtbo
+
+kalama-dtb-$(CONFIG_ARCH_CROW) += \
+	$(call add-overlays, $(CROW_BOARDS) ,$(CROW_BASE_DTB))
+kalama-overlays-dtb-$(CONFIG_ARCH_CROW) += $(CROW_BOARDS) $(CROW_BASE_DTB)
+dtb-y += $(kalama-dtb-y)
+
 KHAJE_BASE_DTB += khaje.dtb khajep.dtb khajeq.dtb khajeg.dtb
 
 KHAJE_BOARDS += \
@@ -307,6 +324,27 @@ kalama_tuivm-dtb-$(CONFIG_ARCH_QTI_VM) += kalama-vm-rumi.dtb \
                  kalama-oemvm-rumi.dtb \
                  kalamap-oemvm-hdk.dtb \
                  kalamap-oemvm-hhg.dtb
+dtb-y += $(kalama_tuivm-dtb-y)
+endif
+endif
+
+ifeq ($(CONFIG_ARCH_CROW), y)
+ifeq ($(CONFIG_ARCH_QTI_VM), y)
+kalama_tuivm-dtb-$(CONFIG_ARCH_QTI_VM) += crow-vm-rumi.dtb \
+	crow-vm-atp.dtb \
+	crow-vm-idp-wcd9395-aatc.dtb \
+	crow-vm-idp-wcd9395-dmic.dtb \
+	crow-vm-idp-wcd9395-wcd-dmic.dtb \
+	crow-vm-idp.dtb \
+	crow-vm-idp-rcm.dtb \
+	crow-vm-qrd.dtb \
+	crow-oemvm-atp.dtb \
+	crow-oemvm-idp-wcd9395-aatc.dtb \
+	crow-oemvm-idp-wcd9395-dmic.dtb \
+	crow-oemvm-idp-wcd9395-wcd-dmic.dtb \
+	crow-oemvm-idp.dtb \
+	crow-oemvm-idp-rcm.dtb \
+	crow-oemvm-qrd.dtb
 dtb-y += $(kalama_tuivm-dtb-y)
 endif
 endif
